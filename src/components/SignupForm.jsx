@@ -13,11 +13,11 @@ const SignupForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
     if (password !== confirmPassword) {
       toast('Passwords do not match',{duration:2000,icon:'❌'});
       return;
     }
+    setLoading(true);
     try {
       const res = await signup(email, password, name);
       console.log(res);
