@@ -4,6 +4,7 @@ import { account } from './appwrite';
 export const signup = async (email, password,name) => {
   try {
     const response = await account.create('unique()', email, password,name);
+    const logResponse = await account.createEmailPasswordSession(email, password);
     return response;
   } catch (error) {
     throw error;

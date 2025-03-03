@@ -23,7 +23,7 @@ const SignupForm = () => {
       console.log(res);
       if (res) {
         toast('Signup successful!! Please login to continue',{duration:1000,icon:'🚀'});
-        setTimeout(()=>navigate('/login'),1000);
+        setTimeout(()=>navigate('/dashboard'),1000);
       }
     } catch (error) {
       console.log(error);
